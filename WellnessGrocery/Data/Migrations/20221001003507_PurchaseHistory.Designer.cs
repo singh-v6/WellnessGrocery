@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WellnessGrocery.Data;
 
@@ -11,9 +12,10 @@ using WellnessGrocery.Data;
 namespace WellnessGrocery.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221001003507_PurchaseHistory")]
+    partial class PurchaseHistory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -248,7 +250,7 @@ namespace WellnessGrocery.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CustomerPurchaseHistoryId")
+                    b.Property<int>("CustomerPurchaseHistoryId")
                         .HasColumnType("int");
 
                     b.HasKey("CustomerId");
@@ -429,7 +431,9 @@ namespace WellnessGrocery.Data.Migrations
                 {
                     b.HasOne("WellnessGrocery.wwwroot.Models.PurchaseHistory", "CustomerPurchaseHistory")
                         .WithMany("PurchaseHistoryCustomers")
-                        .HasForeignKey("CustomerPurchaseHistoryId");
+                        .HasForeignKey("CustomerPurchaseHistoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("CustomerPurchaseHistory");
                 });

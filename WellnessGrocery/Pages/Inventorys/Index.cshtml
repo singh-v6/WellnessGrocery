@@ -1,0 +1,48 @@
+﻿@page
+@model WellnessGrocery.Pages.Inventorys.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Inventory[0].InventoryLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inventory[0].InventoryProductQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inventory[0].InventoryProductAvailablity)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Inventory) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.InventoryLocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InventoryProductQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InventoryProductAvailablity)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.InventoryId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.InventoryId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.InventoryId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
