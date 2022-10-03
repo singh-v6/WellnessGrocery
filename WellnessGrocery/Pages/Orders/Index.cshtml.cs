@@ -9,8 +9,12 @@ using WellnessGrocery.Data;
 <<<<<<< HEAD
 using WellnessGrocery.Models;
 =======
+<<<<<<< HEAD
+using WellnessGrocery.Models;
+=======
 using WellnessGrocery.wwwroot.Models;
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
+>>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
 
 namespace WellnessGrocery.Pages.Orders
 {
@@ -33,8 +37,12 @@ namespace WellnessGrocery.Pages.Orders
 <<<<<<< HEAD
                 .Include(o => o.User).ToListAsync();
 =======
+<<<<<<< HEAD
+                .Include(o => o.User).ToListAsync();
+=======
                 .Include(o => o.OrderCustomer).ToListAsync();
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
+>>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
             }
         }
     }
