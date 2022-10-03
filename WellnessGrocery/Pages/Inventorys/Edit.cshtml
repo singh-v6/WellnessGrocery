@@ -13,6 +13,30 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<<<<<<< HEAD
+            <input type="hidden" asp-for="Inventory.Id" />
+            <div class="form-group">
+                <label asp-for="Inventory.Name" class="control-label"></label>
+                <input asp-for="Inventory.Name" class="form-control" />
+                <span asp-validation-for="Inventory.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inventory.Quantity" class="control-label"></label>
+                <input asp-for="Inventory.Quantity" class="form-control" />
+                <span asp-validation-for="Inventory.Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Inventory.Availablity" /> @Html.DisplayNameFor(model => model.Inventory.Availablity)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inventory.Location" class="control-label"></label>
+                <input asp-for="Inventory.Location" class="form-control" />
+                <span asp-validation-for="Inventory.Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+=======
             <input type="hidden" asp-for="Inventory.InventoryId" />
             <div class="form-group">
                 <label asp-for="Inventory.InventoryLocation" class="control-label"></label>
@@ -30,6 +54,7 @@
                 </label>
             </div>
             <div class="form-group">
+>>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>

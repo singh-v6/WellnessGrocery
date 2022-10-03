@@ -14,6 +14,30 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+<<<<<<< HEAD
+                <label asp-for="Order.UserId" class="control-label"></label>
+                <select asp-for="Order.UserId" class ="form-control" asp-items="ViewBag.UserId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.Quantity" class="control-label"></label>
+                <input asp-for="Order.Quantity" class="form-control" />
+                <span asp-validation-for="Order.Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.TrackingNumber" class="control-label"></label>
+                <input asp-for="Order.TrackingNumber" class="form-control" />
+                <span asp-validation-for="Order.TrackingNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.Date" class="control-label"></label>
+                <input asp-for="Order.Date" class="form-control" />
+                <span asp-validation-for="Order.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.PaymentType" class="control-label"></label>
+                <input asp-for="Order.PaymentType" class="form-control" />
+                <span asp-validation-for="Order.PaymentType" class="text-danger"></span>
+=======
                 <label asp-for="Order.OrderQuantity" class="control-label"></label>
                 <input asp-for="Order.OrderQuantity" class="form-control" />
                 <span asp-validation-for="Order.OrderQuantity" class="text-danger"></span>
@@ -41,6 +65,7 @@
             <div class="form-group">
                 <label asp-for="Order.OrderCustomerId" class="control-label"></label>
                 <select asp-for="Order.OrderCustomerId" class ="form-control" asp-items="ViewBag.OrderCustomerId"></select>
+>>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

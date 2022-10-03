@@ -13,6 +13,33 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<<<<<<< HEAD
+            <input type="hidden" asp-for="Order.Id" />
+            <div class="form-group">
+                <label asp-for="Order.UserId" class="control-label"></label>
+                <select asp-for="Order.UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                <span asp-validation-for="Order.UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.Quantity" class="control-label"></label>
+                <input asp-for="Order.Quantity" class="form-control" />
+                <span asp-validation-for="Order.Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.TrackingNumber" class="control-label"></label>
+                <input asp-for="Order.TrackingNumber" class="form-control" />
+                <span asp-validation-for="Order.TrackingNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.Date" class="control-label"></label>
+                <input asp-for="Order.Date" class="form-control" />
+                <span asp-validation-for="Order.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order.PaymentType" class="control-label"></label>
+                <input asp-for="Order.PaymentType" class="form-control" />
+                <span asp-validation-for="Order.PaymentType" class="text-danger"></span>
+=======
             <input type="hidden" asp-for="Order.OrderId" />
             <div class="form-group">
                 <label asp-for="Order.OrderQuantity" class="control-label"></label>
@@ -43,6 +70,7 @@
                 <label asp-for="Order.OrderCustomerId" class="control-label"></label>
                 <select asp-for="Order.OrderCustomerId" class="form-control" asp-items="ViewBag.OrderCustomerId"></select>
                 <span asp-validation-for="Order.OrderCustomerId" class="text-danger"></span>
+>>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

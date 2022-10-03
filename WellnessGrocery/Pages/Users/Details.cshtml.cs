@@ -6,13 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using WellnessGrocery.Data;
-<<<<<<< HEAD
 using WellnessGrocery.Models;
-=======
-using WellnessGrocery.wwwroot.Models;
->>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
 
-namespace WellnessGrocery.Pages.Inventorys
+namespace WellnessGrocery.Pages.Users
 {
     public class DetailsModel : PageModel
     {
@@ -23,27 +19,23 @@ namespace WellnessGrocery.Pages.Inventorys
             _context = context;
         }
 
-      public Inventory Inventory { get; set; }
+      public User User { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Inventory == null)
+            if (id == null || _context.User == null)
             {
                 return NotFound();
             }
 
-<<<<<<< HEAD
-            var inventory = await _context.Inventory.FirstOrDefaultAsync(m => m.Id == id);
-=======
-            var inventory = await _context.Inventory.FirstOrDefaultAsync(m => m.InventoryId == id);
->>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
-            if (inventory == null)
+            var user = await _context.User.FirstOrDefaultAsync(m => m.Id == id);
+            if (user == null)
             {
                 return NotFound();
             }
             else 
             {
-                Inventory = inventory;
+                User = user;
             }
             return Page();
         }

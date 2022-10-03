@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+﻿namespace WellnessGrocery.Models
+{
+    public class Product
+    {
+       
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public double Price { get; set; }
+        public string Description { get; set; }
+        public List<Orderdetail>? Orderdetail { get; set; }
+        public Inventory? Inventory { get; set; }
+        public int InventoryId { get; set; }
+        public string? picture { get; set; }
+=======
 ﻿namespace WellnessGrocery.wwwroot.Models
 {
     public class Product
@@ -10,5 +25,6 @@
         public int ProductOrderId { get; set; }
         public Inventory ProductInventory { get; set; }
         public int ProductInventoryId { get; set; }
+>>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
     }
 }

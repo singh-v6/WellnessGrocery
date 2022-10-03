@@ -6,13 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using WellnessGrocery.Data;
-<<<<<<< HEAD
 using WellnessGrocery.Models;
-=======
-using WellnessGrocery.wwwroot.Models;
->>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
 
-namespace WellnessGrocery.Pages.Orders
+namespace WellnessGrocery.Pages.Users
 {
     public class DeleteModel : PageModel
     {
@@ -24,44 +20,40 @@ namespace WellnessGrocery.Pages.Orders
         }
 
         [BindProperty]
-      public Order Order { get; set; }
+      public User User { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Order == null)
+            if (id == null || _context.User == null)
             {
                 return NotFound();
             }
 
-<<<<<<< HEAD
-            var order = await _context.Order.FirstOrDefaultAsync(m => m.Id == id);
-=======
-            var order = await _context.Order.FirstOrDefaultAsync(m => m.OrderId == id);
->>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
+            var user = await _context.User.FirstOrDefaultAsync(m => m.Id == id);
 
-            if (order == null)
+            if (user == null)
             {
                 return NotFound();
             }
             else 
             {
-                Order = order;
+                User = user;
             }
             return Page();
         }
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null || _context.Order == null)
+            if (id == null || _context.User == null)
             {
                 return NotFound();
             }
-            var order = await _context.Order.FindAsync(id);
+            var user = await _context.User.FindAsync(id);
 
-            if (order != null)
+            if (user != null)
             {
-                Order = order;
-                _context.Order.Remove(Order);
+                User = user;
+                _context.User.Remove(User);
                 await _context.SaveChangesAsync();
             }
 

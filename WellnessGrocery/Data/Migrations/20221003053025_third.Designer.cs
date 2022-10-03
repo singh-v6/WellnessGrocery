@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WellnessGrocery.Data;
 
@@ -11,9 +12,10 @@ using WellnessGrocery.Data;
 namespace WellnessGrocery.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221003053025_third")]
+    partial class third
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -224,7 +226,6 @@ namespace WellnessGrocery.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-<<<<<<< HEAD
             modelBuilder.Entity("WellnessGrocery.Models.Inventory", b =>
                 {
                     b.Property<int>("Id")
@@ -248,66 +249,10 @@ namespace WellnessGrocery.Data.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-=======
-            modelBuilder.Entity("WellnessGrocery.wwwroot.Models.Customer", b =>
-                {
-                    b.Property<int>("CustomerId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CustomerId"), 1L, 1);
-
-                    b.Property<string>("CustomerAddress")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CustomerEmail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CustomerName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CustomerPhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("CustomerPurchaseHistoryId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CustomerId");
-
-                    b.HasIndex("CustomerPurchaseHistoryId");
-
-                    b.ToTable("Customer");
-                });
-
-            modelBuilder.Entity("WellnessGrocery.wwwroot.Models.Inventory", b =>
-                {
-                    b.Property<int>("InventoryId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InventoryId"), 1L, 1);
-
-                    b.Property<string>("InventoryLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("InventoryProductAvailablity")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("InventoryProductQuantity")
-                        .HasColumnType("int");
-
-                    b.HasKey("InventoryId");
->>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
 
                     b.ToTable("Inventory");
                 });
 
-<<<<<<< HEAD
             modelBuilder.Entity("WellnessGrocery.Models.Order", b =>
                 {
                     b.Property<int>("Id")
@@ -336,45 +281,10 @@ namespace WellnessGrocery.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
-=======
-            modelBuilder.Entity("WellnessGrocery.wwwroot.Models.Order", b =>
-                {
-                    b.Property<int>("OrderId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderId"), 1L, 1);
-
-                    b.Property<int?>("OrderCustomerId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("OrderDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("OrderPaymentType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("OrderQuantity")
-                        .HasColumnType("int");
-
-                    b.Property<string>("OrderStatus")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("OrderTrackingNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("OrderId");
-
-                    b.HasIndex("OrderCustomerId");
->>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
 
                     b.ToTable("Order");
                 });
 
-<<<<<<< HEAD
             modelBuilder.Entity("WellnessGrocery.Models.Orderdetail", b =>
                 {
                     b.Property<int>("Id")
@@ -430,43 +340,10 @@ namespace WellnessGrocery.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("InventoryId");
-=======
-            modelBuilder.Entity("WellnessGrocery.wwwroot.Models.Product", b =>
-                {
-                    b.Property<int>("ProductId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductId"), 1L, 1);
-
-                    b.Property<string>("ProductDescription")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ProductInventoryId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ProductName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ProductOrderId")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("ProductPrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("ProductId");
-
-                    b.HasIndex("ProductInventoryId");
-
-                    b.HasIndex("ProductOrderId");
->>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
 
                     b.ToTable("Product");
                 });
 
-<<<<<<< HEAD
             modelBuilder.Entity("WellnessGrocery.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -501,29 +378,6 @@ namespace WellnessGrocery.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("User");
-=======
-            modelBuilder.Entity("WellnessGrocery.wwwroot.Models.PurchaseHistory", b =>
-                {
-                    b.Property<int>("PurchaseHistoryId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PurchaseHistoryId"), 1L, 1);
-
-                    b.Property<DateTime>("PurchaseHistoryDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("PurchaseHistoryNumOrders")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PurchaseHistoryPaymentType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("PurchaseHistoryId");
-
-                    b.ToTable("PurchaseHistory");
->>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -577,7 +431,6 @@ namespace WellnessGrocery.Data.Migrations
                         .IsRequired();
                 });
 
-<<<<<<< HEAD
             modelBuilder.Entity("WellnessGrocery.Models.Order", b =>
                 {
                     b.HasOne("WellnessGrocery.Models.User", "User")
@@ -637,63 +490,6 @@ namespace WellnessGrocery.Data.Migrations
             modelBuilder.Entity("WellnessGrocery.Models.User", b =>
                 {
                     b.Navigation("Orders");
-=======
-            modelBuilder.Entity("WellnessGrocery.wwwroot.Models.Customer", b =>
-                {
-                    b.HasOne("WellnessGrocery.wwwroot.Models.PurchaseHistory", "CustomerPurchaseHistory")
-                        .WithMany("PurchaseHistoryCustomers")
-                        .HasForeignKey("CustomerPurchaseHistoryId");
-
-                    b.Navigation("CustomerPurchaseHistory");
-                });
-
-            modelBuilder.Entity("WellnessGrocery.wwwroot.Models.Order", b =>
-                {
-                    b.HasOne("WellnessGrocery.wwwroot.Models.Customer", "OrderCustomer")
-                        .WithMany("CustomerOrders")
-                        .HasForeignKey("OrderCustomerId");
-
-                    b.Navigation("OrderCustomer");
-                });
-
-            modelBuilder.Entity("WellnessGrocery.wwwroot.Models.Product", b =>
-                {
-                    b.HasOne("WellnessGrocery.wwwroot.Models.Inventory", "ProductInventory")
-                        .WithMany("InventoryProducts")
-                        .HasForeignKey("ProductInventoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("WellnessGrocery.wwwroot.Models.Order", "ProductOrder")
-                        .WithMany("OrderProducts")
-                        .HasForeignKey("ProductOrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ProductInventory");
-
-                    b.Navigation("ProductOrder");
-                });
-
-            modelBuilder.Entity("WellnessGrocery.wwwroot.Models.Customer", b =>
-                {
-                    b.Navigation("CustomerOrders");
-                });
-
-            modelBuilder.Entity("WellnessGrocery.wwwroot.Models.Inventory", b =>
-                {
-                    b.Navigation("InventoryProducts");
-                });
-
-            modelBuilder.Entity("WellnessGrocery.wwwroot.Models.Order", b =>
-                {
-                    b.Navigation("OrderProducts");
-                });
-
-            modelBuilder.Entity("WellnessGrocery.wwwroot.Models.PurchaseHistory", b =>
-                {
-                    b.Navigation("PurchaseHistoryCustomers");
->>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
                 });
 #pragma warning restore 612, 618
         }

@@ -6,13 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using WellnessGrocery.Data;
-<<<<<<< HEAD
 using WellnessGrocery.Models;
-=======
-using WellnessGrocery.wwwroot.Models;
->>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
 
-namespace WellnessGrocery.Pages.Orders
+namespace WellnessGrocery.Pages.Orderdetails
 {
     public class CreateModel : PageModel
     {
@@ -25,16 +21,13 @@ namespace WellnessGrocery.Pages.Orders
 
         public IActionResult OnGet()
         {
-<<<<<<< HEAD
-        ViewData["UserId"] = new SelectList(_context.User, "Id", "Id");
-=======
-        ViewData["OrderCustomerId"] = new SelectList(_context.Customer, "CustomerId", "CustomerId");
->>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
+        ViewData["OrderID"] = new SelectList(_context.Order, "Id", "Id");
+        ViewData["ProductID"] = new SelectList(_context.Product, "Id", "Id");
             return Page();
         }
 
         [BindProperty]
-        public Order Order { get; set; }
+        public Orderdetail Orderdetail { get; set; }
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
@@ -45,7 +38,7 @@ namespace WellnessGrocery.Pages.Orders
                 return Page();
             }
 
-            _context.Order.Add(Order);
+            _context.Orderdetail.Add(Orderdetail);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

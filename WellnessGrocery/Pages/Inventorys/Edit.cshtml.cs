@@ -7,7 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WellnessGrocery.Data;
+<<<<<<< HEAD
+using WellnessGrocery.Models;
+=======
 using WellnessGrocery.wwwroot.Models;
+>>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
 
 namespace WellnessGrocery.Pages.Inventorys
 {
@@ -30,7 +34,11 @@ namespace WellnessGrocery.Pages.Inventorys
                 return NotFound();
             }
 
+<<<<<<< HEAD
+            var inventory =  await _context.Inventory.FirstOrDefaultAsync(m => m.Id == id);
+=======
             var inventory =  await _context.Inventory.FirstOrDefaultAsync(m => m.InventoryId == id);
+>>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
             if (inventory == null)
             {
                 return NotFound();
@@ -56,7 +64,11 @@ namespace WellnessGrocery.Pages.Inventorys
             }
             catch (DbUpdateConcurrencyException)
             {
+<<<<<<< HEAD
+                if (!InventoryExists(Inventory.Id))
+=======
                 if (!InventoryExists(Inventory.InventoryId))
+>>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
                 {
                     return NotFound();
                 }
@@ -71,7 +83,11 @@ namespace WellnessGrocery.Pages.Inventorys
 
         private bool InventoryExists(int id)
         {
+<<<<<<< HEAD
+          return _context.Inventory.Any(e => e.Id == id);
+=======
           return _context.Inventory.Any(e => e.InventoryId == id);
+>>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
         }
     }
 }

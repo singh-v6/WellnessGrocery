@@ -14,6 +14,21 @@
     <thead>
         <tr>
             <th>
+<<<<<<< HEAD
+                @Html.DisplayNameFor(model => model.Product[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Inventory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].picture)
+=======
                 @Html.DisplayNameFor(model => model.Product[0].ProductName)
             </th>
             <th>
@@ -27,6 +42,7 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Product[0].ProductInventory)
+>>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
             </th>
             <th></th>
         </tr>
@@ -35,6 +51,26 @@
 @foreach (var item in Model.Product) {
         <tr>
             <td>
+<<<<<<< HEAD
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inventory.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.picture)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+=======
                 @Html.DisplayFor(modelItem => item.ProductName)
             </td>
             <td>
@@ -53,6 +89,7 @@
                 <a asp-page="./Edit" asp-route-id="@item.ProductId">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ProductId">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@item.ProductId">Delete</a>
+>>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
             </td>
         </tr>
 }

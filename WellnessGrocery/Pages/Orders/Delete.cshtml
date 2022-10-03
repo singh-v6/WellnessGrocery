@@ -13,6 +13,36 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
+<<<<<<< HEAD
+            @Html.DisplayNameFor(model => model.Order.User)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.User.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.Quantity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.Quantity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.TrackingNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.TrackingNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.PaymentType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.PaymentType)
+=======
             @Html.DisplayNameFor(model => model.Order.OrderQuantity)
         </dt>
         <dd class="col-sm-10">
@@ -47,11 +77,16 @@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Order.OrderCustomer.CustomerId)
+>>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
         </dd>
     </dl>
     
     <form method="post">
+<<<<<<< HEAD
+        <input type="hidden" asp-for="Order.Id" />
+=======
         <input type="hidden" asp-for="Order.OrderId" />
+>>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-page="./Index">Back to List</a>
     </form>

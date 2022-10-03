@@ -6,13 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using WellnessGrocery.Data;
-<<<<<<< HEAD
 using WellnessGrocery.Models;
-=======
-using WellnessGrocery.wwwroot.Models;
->>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
 
-namespace WellnessGrocery.Pages.Orders
+namespace WellnessGrocery.Pages.Orderdetails
 {
     public class DeleteModel : PageModel
     {
@@ -24,44 +20,40 @@ namespace WellnessGrocery.Pages.Orders
         }
 
         [BindProperty]
-      public Order Order { get; set; }
+      public Orderdetail Orderdetail { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Order == null)
+            if (id == null || _context.Orderdetail == null)
             {
                 return NotFound();
             }
 
-<<<<<<< HEAD
-            var order = await _context.Order.FirstOrDefaultAsync(m => m.Id == id);
-=======
-            var order = await _context.Order.FirstOrDefaultAsync(m => m.OrderId == id);
->>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
+            var orderdetail = await _context.Orderdetail.FirstOrDefaultAsync(m => m.Id == id);
 
-            if (order == null)
+            if (orderdetail == null)
             {
                 return NotFound();
             }
             else 
             {
-                Order = order;
+                Orderdetail = orderdetail;
             }
             return Page();
         }
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null || _context.Order == null)
+            if (id == null || _context.Orderdetail == null)
             {
                 return NotFound();
             }
-            var order = await _context.Order.FindAsync(id);
+            var orderdetail = await _context.Orderdetail.FindAsync(id);
 
-            if (order != null)
+            if (orderdetail != null)
             {
-                Order = order;
-                _context.Order.Remove(Order);
+                Orderdetail = orderdetail;
+                _context.Orderdetail.Remove(Orderdetail);
                 await _context.SaveChangesAsync();
             }
 

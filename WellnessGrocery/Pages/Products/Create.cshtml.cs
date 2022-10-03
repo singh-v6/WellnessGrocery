@@ -6,7 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using WellnessGrocery.Data;
+<<<<<<< HEAD
+using WellnessGrocery.Models;
+=======
 using WellnessGrocery.wwwroot.Models;
+>>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
 
 namespace WellnessGrocery.Pages.Products
 {
@@ -21,8 +25,12 @@ namespace WellnessGrocery.Pages.Products
 
         public IActionResult OnGet()
         {
+<<<<<<< HEAD
+        ViewData["InventoryId"] = new SelectList(_context.Set<Inventory>(), "Id", "Id");
+=======
         ViewData["ProductInventoryId"] = new SelectList(_context.Inventory, "InventoryId", "InventoryId");
         ViewData["ProductOrderId"] = new SelectList(_context.Order, "OrderId", "OrderId");
+>>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
             return Page();
         }
 

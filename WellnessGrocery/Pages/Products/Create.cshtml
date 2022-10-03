@@ -14,6 +14,30 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+<<<<<<< HEAD
+                <label asp-for="Product.Name" class="control-label"></label>
+                <input asp-for="Product.Name" class="form-control" />
+                <span asp-validation-for="Product.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Price" class="control-label"></label>
+                <input asp-for="Product.Price" class="form-control" />
+                <span asp-validation-for="Product.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Description" class="control-label"></label>
+                <input asp-for="Product.Description" class="form-control" />
+                <span asp-validation-for="Product.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.InventoryId" class="control-label"></label>
+                <select asp-for="Product.InventoryId" class ="form-control" asp-items="ViewBag.InventoryId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.picture" class="control-label"></label>
+                <input asp-for="Product.picture" class="form-control" />
+                <span asp-validation-for="Product.picture" class="text-danger"></span>
+=======
                 <label asp-for="Product.ProductName" class="control-label"></label>
                 <input asp-for="Product.ProductName" class="form-control" />
                 <span asp-validation-for="Product.ProductName" class="text-danger"></span>
@@ -35,6 +59,7 @@
             <div class="form-group">
                 <label asp-for="Product.ProductInventoryId" class="control-label"></label>
                 <select asp-for="Product.ProductInventoryId" class ="form-control" asp-items="ViewBag.ProductInventoryId"></select>
+>>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
