@@ -225,9 +225,6 @@ namespace WellnessGrocery.Data.Migrations
                 });
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
             modelBuilder.Entity("WellnessGrocery.Models.Inventory", b =>
                 {
                     b.Property<int>("Id")
@@ -251,8 +248,6 @@ namespace WellnessGrocery.Data.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-<<<<<<< HEAD
-=======
 =======
             modelBuilder.Entity("WellnessGrocery.wwwroot.Models.Customer", b =>
                 {
@@ -308,15 +303,11 @@ namespace WellnessGrocery.Data.Migrations
 
                     b.HasKey("InventoryId");
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
 
                     b.ToTable("Inventory");
                 });
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
             modelBuilder.Entity("WellnessGrocery.Models.Order", b =>
                 {
                     b.Property<int>("Id")
@@ -345,8 +336,6 @@ namespace WellnessGrocery.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
-<<<<<<< HEAD
-=======
 =======
             modelBuilder.Entity("WellnessGrocery.wwwroot.Models.Order", b =>
                 {
@@ -381,15 +370,11 @@ namespace WellnessGrocery.Data.Migrations
 
                     b.HasIndex("OrderCustomerId");
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
 
                     b.ToTable("Order");
                 });
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
             modelBuilder.Entity("WellnessGrocery.Models.Orderdetail", b =>
                 {
                     b.Property<int>("Id")
@@ -445,8 +430,6 @@ namespace WellnessGrocery.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("InventoryId");
-<<<<<<< HEAD
-=======
 =======
             modelBuilder.Entity("WellnessGrocery.wwwroot.Models.Product", b =>
                 {
@@ -479,15 +462,11 @@ namespace WellnessGrocery.Data.Migrations
 
                     b.HasIndex("ProductOrderId");
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
 
                     b.ToTable("Product");
                 });
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
             modelBuilder.Entity("WellnessGrocery.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -522,8 +501,6 @@ namespace WellnessGrocery.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("User");
-<<<<<<< HEAD
-=======
 =======
             modelBuilder.Entity("WellnessGrocery.wwwroot.Models.PurchaseHistory", b =>
                 {
@@ -547,7 +524,6 @@ namespace WellnessGrocery.Data.Migrations
 
                     b.ToTable("PurchaseHistory");
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -602,9 +578,6 @@ namespace WellnessGrocery.Data.Migrations
                 });
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
             modelBuilder.Entity("WellnessGrocery.Models.Order", b =>
                 {
                     b.HasOne("WellnessGrocery.Models.User", "User")
@@ -664,8 +637,6 @@ namespace WellnessGrocery.Data.Migrations
             modelBuilder.Entity("WellnessGrocery.Models.User", b =>
                 {
                     b.Navigation("Orders");
-<<<<<<< HEAD
-=======
 =======
             modelBuilder.Entity("WellnessGrocery.wwwroot.Models.Customer", b =>
                 {
@@ -723,7 +694,6 @@ namespace WellnessGrocery.Data.Migrations
                 {
                     b.Navigation("PurchaseHistoryCustomers");
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
                 });
 #pragma warning restore 612, 618
         }

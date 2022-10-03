@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
 ﻿namespace WellnessGrocery.Models
 {
     public class Order
@@ -15,8 +12,6 @@
         public string PaymentType { get; set; }       
         public List<Orderdetail>? Orderdetail { get; set; }
 
-<<<<<<< HEAD
-=======
 =======
 ﻿namespace WellnessGrocery.wwwroot.Models
 {
@@ -32,6 +27,5 @@
         public int? OrderCustomerId { get; set; }
         public List<Product> OrderProducts { get; set; }
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
     }
 }

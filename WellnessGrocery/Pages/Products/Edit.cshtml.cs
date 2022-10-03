@@ -10,12 +10,8 @@ using WellnessGrocery.Data;
 <<<<<<< HEAD
 using WellnessGrocery.Models;
 =======
-<<<<<<< HEAD
-using WellnessGrocery.Models;
-=======
 using WellnessGrocery.wwwroot.Models;
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
 
 namespace WellnessGrocery.Pages.Products
 {
@@ -41,12 +37,8 @@ namespace WellnessGrocery.Pages.Products
 <<<<<<< HEAD
             var product =  await _context.Product.FirstOrDefaultAsync(m => m.Id == id);
 =======
-<<<<<<< HEAD
-            var product =  await _context.Product.FirstOrDefaultAsync(m => m.Id == id);
-=======
             var product =  await _context.Product.FirstOrDefaultAsync(m => m.ProductId == id);
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
             if (product == null)
             {
                 return NotFound();
@@ -55,13 +47,9 @@ namespace WellnessGrocery.Pages.Products
 <<<<<<< HEAD
            ViewData["InventoryId"] = new SelectList(_context.Set<Inventory>(), "Id", "Id");
 =======
-<<<<<<< HEAD
-           ViewData["InventoryId"] = new SelectList(_context.Set<Inventory>(), "Id", "Id");
-=======
            ViewData["ProductInventoryId"] = new SelectList(_context.Inventory, "InventoryId", "InventoryId");
            ViewData["ProductOrderId"] = new SelectList(_context.Order, "OrderId", "OrderId");
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
             return Page();
         }
 
@@ -85,12 +73,8 @@ namespace WellnessGrocery.Pages.Products
 <<<<<<< HEAD
                 if (!ProductExists(Product.Id))
 =======
-<<<<<<< HEAD
-                if (!ProductExists(Product.Id))
-=======
                 if (!ProductExists(Product.ProductId))
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
                 {
                     return NotFound();
                 }
@@ -108,12 +92,8 @@ namespace WellnessGrocery.Pages.Products
 <<<<<<< HEAD
           return _context.Product.Any(e => e.Id == id);
 =======
-<<<<<<< HEAD
-          return _context.Product.Any(e => e.Id == id);
-=======
           return _context.Product.Any(e => e.ProductId == id);
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
         }
     }
 }

@@ -10,12 +10,8 @@ using WellnessGrocery.Data;
 <<<<<<< HEAD
 using WellnessGrocery.Models;
 =======
-<<<<<<< HEAD
-using WellnessGrocery.Models;
-=======
 using WellnessGrocery.wwwroot.Models;
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
 
 namespace WellnessGrocery.Pages.Inventorys
 {
@@ -41,12 +37,8 @@ namespace WellnessGrocery.Pages.Inventorys
 <<<<<<< HEAD
             var inventory =  await _context.Inventory.FirstOrDefaultAsync(m => m.Id == id);
 =======
-<<<<<<< HEAD
-            var inventory =  await _context.Inventory.FirstOrDefaultAsync(m => m.Id == id);
-=======
             var inventory =  await _context.Inventory.FirstOrDefaultAsync(m => m.InventoryId == id);
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
             if (inventory == null)
             {
                 return NotFound();
@@ -75,12 +67,8 @@ namespace WellnessGrocery.Pages.Inventorys
 <<<<<<< HEAD
                 if (!InventoryExists(Inventory.Id))
 =======
-<<<<<<< HEAD
-                if (!InventoryExists(Inventory.Id))
-=======
                 if (!InventoryExists(Inventory.InventoryId))
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
                 {
                     return NotFound();
                 }
@@ -98,12 +86,8 @@ namespace WellnessGrocery.Pages.Inventorys
 <<<<<<< HEAD
           return _context.Inventory.Any(e => e.Id == id);
 =======
-<<<<<<< HEAD
-          return _context.Inventory.Any(e => e.Id == id);
-=======
           return _context.Inventory.Any(e => e.InventoryId == id);
 >>>>>>> 3b671bcda0ec55ae50bffaa4dd2e059c5ceaadf0
->>>>>>> e81d8d9c89c79c993c9f52b7e8be95bededbb375
         }
     }
 }
